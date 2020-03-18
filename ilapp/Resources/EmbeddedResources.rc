@@ -1,0 +1,48 @@
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+
+#include<winres.h>
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#define TXE_SCHEMA_RENDERER		0
+#define TXE_ROUTES_RENDERER		1
+#define TXE_HANDLER_RENDERER		2
+#define TXE_CLASSES_RENDERER		3
+#define TXE_USERTX_RENDERER		4
+#define TXE_AUTHENTICATION_RENDERER 	5
+#define TXE_AUDIT_HISTORY_RENDERER 	6
+#define TXE_STATS_HISTORY_RENDERER 	7
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	TXE_SCHEMA_RENDERER		"<?xml version=""1.0"" ?><xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" version=""1.0"" ><xsl:template match=""/""><HTML><HEAD><LINK rel=""stylesheet"" type=""text/css"" href=""__STYLESHEETURL__"" /></HEAD><BODY style=""background-color:black;"" TOPMARGIN=""0"" LEFTMARGIN=""0""><BR/><SPAN style=""font-size:18;position:absolute;top:10;left:18;width:100%;color:goldenrod;"">Schema Groups</SPAN><DIV  style=""position:absolute;top:72;left:18;padding:1px;border-width:0px;width:100%;""><TABLE name=""tabSchemas"" id=""tabSchemas"" BORDER=""0"" CELLSPACING=""0"" CELLPADDING=""0"" width=""105%""><TR><TH ALIGN=""LEFT"">ID</TH><TH ALIGN=""LEFT"">Group Name</TH><TH ALIGN=""LEFT"">Group Description</TH><TH ALIGN=""LEFT"">Schema</TH><TH ALIGN=""LEFT"">Description</TH><TH ALIGN=""LEFT"">Namespace</TH></TR><xsl:for-each select=""//SchemaGroups/SiteSchemaGroup/SchemaGroup""><TR id=""DOCTYPEROW""><TD><xsl:value-of select=""@GroupID""/></TD><TD><xsl:value-of select=""GroupName""/></TD><TD><xsl:value-of select=""Description""/></TD><TD></TD><TD></TD><xsl:for-each select=""Schema""><TD><TR id=""DOCTYPEROW""><TD></TD><TD></TD><TD></TD><TD><xsl:value-of select=""@ID""/></TD><TD><A HREF=""javascript:alert('notimpl');""><xsl:value-of select=""Description""/></A></TD><TD><xsl:value-of select=""Namespace""/></TD></TR></TD></xsl:for-each></TR><tr><td colspan=""6""><hr/></td></tr></xsl:for-each></TABLE></DIV></BODY></HTML></xsl:template></xsl:stylesheet>"
+
+	TXE_ROUTES_RENDERER		"<?xml version=""1.0""  ?><xsl:stylesheet  xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" version=""1.0"" ><xsl:param name=""RELEASEVERSION""></xsl:param><xsl:template match=""/""><DIV style=""padding:12px;border-width:0px;""><FORM id=""frmConfig"" name=""frmConfig"" ><DIV><TABLE name=""tabRoute"" id=""tabRoute"" BORDER=""0"" CELLSPACING=""0""><SPAN style=""width:100%;"">Routing</SPAN><TR><TH ALIGN=""LEFT"">Route ID</TH><TH ALIGN=""LEFT"">GroupName</TH><TH ALIGN=""LEFT"">Group Description</TH><TH ALIGN=""LEFT"">Route Type</TH><TH ALIGN=""LEFT"">Delivery Handler</TH><TH ALIGN=""LEFT"">Priority</TH></TR><xsl:for-each select=""//Routes/SiteRoute/Route""><TR id=""DOCTYPEROW""><TD><xsl:value-of select=""@ID""/></TD><TD><xsl:value-of select=""GroupName""/></TD><TD><xsl:value-of select=""GroupDescription""/>            </TD><TD><xsl:value-of select=""RouteType""/></TD><TD></TD><TD></TD><xsl:for-each select=""DeliveryRoutes""><TD><TR id=""DOCTYPEROW""><TD></TD><TD></TD><TD></TD><TD></TD><TD><xsl:value-of select=""DeliveryHandler""/></TD><TD><xsl:value-of select=""Priority""/></TD></TR></TD></xsl:for-each></TR><tr><td colspan=""6""><hr/></td></tr></xsl:for-each></TABLE></DIV><BR/><BR/></FORM></DIV></xsl:template></xsl:stylesheet>"
+
+	TXE_HANDLER_RENDERER		"<?xml version=""1.0"" ?><xsl:stylesheet  xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" version=""1.0"" ><xsl:param name=""RELEASEVERSION""></xsl:param><xsl:template match=""/""><DIV style=""padding:12px;border-width:0px;""><FORM id=""frmConfig"" name=""frmConfig"" ><DIV><TABLE name=""tabDelivery"" id=""tabDelivery"" BORDER=""0"" CELLSPACING=""0""><SPAN style=""width:100%;"">Delivery Handlers</SPAN><TR><TH ALIGN=""LEFT"">Delivery Handler ID</TH><TH ALIGN=""LEFT"">Description</TH><TH ALIGN=""LEFT"">Prog ID</TH><TH ALIGN=""LEFT"">Public Name</TH><TH ALIGN=""LEFT"">Internal Name</TH><TH ALIGN=""LEFT"">Attribute ID</TH><TH ALIGN=""LEFT"">Description</TH><TH ALIGN=""LEFT"">Value</TH></TR><xsl:for-each select=""//DeliveryHandlers/SiteDeliveryHandlers/DeliveryHandler""><TR id=""DOCTYPEROW""><TD><xsl:value-of select=""@ID""/></TD><TD><xsl:value-of select=""Description""/></TD><TD><xsl:value-of select=""ProgID""/></TD>           <TD><xsl:value-of select=""PublicName""/></TD><TD><xsl:value-of select=""InternalName""/></TD><TD></TD><TD></TD>            <xsl:for-each select=""Attribute""><TD><TR id=""DOCTYPEROW""><TD></TD><TD></TD><TD></TD><TD></TD>        <TD></TD><TD><xsl:value-of select=""@ID""/></TD><TD><xsl:value-of select=""Description""/></TD><TD><xsl:value-of select=""Value""/></TD></TR></TD></xsl:for-each></TR><tr><td colspan=""8""><hr/></td></tr></xsl:for-each></TABLE></DIV></FORM></DIV></xsl:template></xsl:stylesheet>"
+
+	TXE_CLASSES_RENDERER		"<xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" version=""1.0"" ><xsl:template match=""/""><DIV style=""padding:12px;border-width:0px;""><FORM id=""frmConfig"" name=""frmConfig"" ><DIV><TABLE name=""tabRoute"" id=""tabRoute"" BORDER=""0"" CELLSPACING=""0""><SPAN style=""width:100%;"">Service Class</SPAN><TR><TH ALIGN=""LEFT"">ID</TH><TH ALIGN=""LEFT"">Tx Class</TH><TH ALIGN=""LEFT"">Static Poll Interval</TH><TH ALIGN=""LEFT"">Status</TH></TR><xsl:for-each select=""//SiteServiceClass/Site/DocumentType""><TR id=""DOCTYPEROW""><TD><xsl:value-of select=""@ID""/></TD><TD><xsl:value-of select=""DocType""/></TD>    <TD><xsl:value-of select=""StaticPollInterval""/></TD><TD><xsl:value-of select=""DynamicPollInterval""/></TD><TD><xsl:value-of select=""ResponseEndPoint""/></TD><TD><xsl:value-of select=""Status""/></TD><TD><xsl:value-of select=""AuthFlags""/></TD></TR><tr><td colspan=""7""><hr/></td></tr></xsl:for-each></TABLE></DIV><BR/><BR/></FORM></DIV></xsl:template></xsl:stylesheet>"
+
+	TXE_USERTX_RENDERER		"<HTML><HEAD></HEAD><SCRIPT>function FetchDetails(){var xmlList; var GSOTxEAdminObject;alert(txtCred.value);GSOTxEAdminObject = window.external;xmlList = GSOTxEAdminObject.FetchTxByCredXML(txtCred.value, txtClass.value);alert(xmlList);}</SCRIPT><BODY id=""mainBody""><LABEL>Tx Query by Cred</LABEL><BR/><INPUT type=""text"" id=""txtCred"" ></INPUT><BR/><INPUT type=""text"" id=""txtClass"" ></INPUT><BR/><BUTTON onclick=""FetchDetails();"">Fetch Tx's</BUTTON></BODY></HTML>"
+END
+
+	
+
+
+#endif    
